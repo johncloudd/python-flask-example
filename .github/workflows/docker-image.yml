@@ -19,7 +19,7 @@ jobs:
         TAG="superclient.jfrog.io/artifactory/docker-trial/python_app:1"
         docker build . --file Dockerfile --tag $TAG
         echo "${{ secrets.JF_PASSWORD }}" | docker login https://superclient.jfrog.io --username johntest --password-stdin
-        docker push superclient.jfrog.io/artifactory/docker-trial/
+        docker push superclient.jfrog.io/artifactory/docker-trial/python_app:1
 
         
       
