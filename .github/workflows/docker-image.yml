@@ -21,4 +21,5 @@ jobs:
         echo "${{ secrets.JF_PASSWORD }}" | docker login https://superclient.jfrog.io/artifactory/docker-trial/ --username {{ secrets.JF_USER }} --password-stdin
         docker push $TAG
         
+        
       
