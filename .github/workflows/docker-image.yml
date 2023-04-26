@@ -16,9 +16,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: |
-        TAG="superclient.jfrog.io/artifactory/docker-trial/python_app:1"
+        TAG="transamerica.jfrog.io/docker-local/python_app:1"
         docker build . --file Dockerfile --tag $TAG
-        echo "${{ secrets.JF_PASSWORD }}" | docker login https://superclient.jfrog.io/artifactory/pythonjohn/ --username johntest --password-stdin
+        echo "${{ secrets.JF_PASSWORD }}" | docker login https://transamerica.jfrog.io/artifactory/docker/ --username johntest --password-stdin
         docker push $TAG
 
         
