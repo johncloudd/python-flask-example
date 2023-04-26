@@ -18,7 +18,7 @@ jobs:
       run: |
         TAG="transamerica.jfrog.io/docker-local/python_app:1"
         docker build . --file Dockerfile --tag $TAG
-        echo "${{ secrets.JF_PASSWORD }}" | docker login https://transamerica.jfrog.io/artifactory/docker/ --username johntest --password-stdin
+        echo "${{ secrets.JF_PASSWORD }}" | docker login https://transamerica.jfrog.io/artifactory/docker/ --username admin --password-stdin
         docker push $TAG
 
         
